@@ -16,6 +16,10 @@ document.getElementById("one").addEventListener("keyup", function() {
     exchangeExecution();
 });
 
+document.getElementById("one").addEventListener("click", function() {
+    exchangeExecution();
+});
+
 document.getElementById("exchange1").addEventListener("change", function() {
     exchangeExecution();
 });
