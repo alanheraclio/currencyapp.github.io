@@ -6,7 +6,7 @@ function compareExecution1() {
     var exchange1Old = sel1.options[sel1.selectedIndex].getAttribute('value2');
     if (exchange1 == exchange1Old) {
         document.getElementsByTagName("span")[0].innerHTML = "stagnating";
-        document.getElementsByTagName("span")[0].style.color = "#FFEA00";
+        document.getElementsByTagName("span")[0].style.color = "#FFAB00";
     } else if (exchange1 > exchange1Old) {
         document.getElementsByTagName("span")[0].innerHTML = "growing";
         document.getElementsByTagName("span")[0].style.color = "#00E676";
@@ -22,7 +22,7 @@ function compareExecution2() {
     var exchange2Old = sel2.options[sel2.selectedIndex].getAttribute('value2');
     if (exchange2 == exchange2Old) {
         document.getElementsByTagName("span")[1].innerHTML = "stagnating";
-        document.getElementsByTagName("span")[1].style.color = "#FFEA00";
+        document.getElementsByTagName("span")[1].style.color = "#FFAB00";
     } else if (exchange2 > exchange2Old) {
         document.getElementsByTagName("span")[1].innerHTML = "growing";
         document.getElementsByTagName("span")[1].style.color = "#00E676";

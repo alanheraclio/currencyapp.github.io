@@ -1,10 +1,15 @@
+body {
+    margin: 10px;
+    background-image: linear-gradient(to right, #FFFFFF, #EEEEEE);
+}
+
 h1 {
     color: black;
 }
 
 span {
     background-color: #EEEEEE;
-    color: #FFEA00;
+    color: #FFAB00;
     padding: 3px;
     margin: 3px;
     border-radius: 60%;
