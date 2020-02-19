@@ -1,4 +1,4 @@
-function gettingData() {
+function gettingCurrentData() {
     console.log("gettingData running");
     fetch('https://api.exchangeratesapi.io/latest')
         .then(rates = (response) => response.json())
@@ -19,22 +19,9 @@ function gettingData() {
         })
 }
 
-gettingData();
+gettingCurrentData();
 
-function exchangeExecution() {
-
-}
-
-document.getElementById("one").addEventListener("keyup", function() {
-    var sel1 = document.getElementById("exchange1");
-    var exchange1 = sel1.options[sel1.selectedIndex];
-    exchange1 = exchange1.value;
-    var sel2 = document.getElementById("exchange2");
-    var exchange2 = sel2.options[sel2.selectedIndex];
-    exchange2 = exchange2.value;
-    console.log(exchange1);
-    console.log(exchange2);
-    var quantity = document.getElementById("one").value;
-    var result = (parseFloat(quantity) / parseFloat(exchange1)) * parseFloat(exchange2);
-    document.getElementById("two").value = result;
-});
+setInterval(() => {
+    gettingCurrentData();
+    console.log("data refreshed from: https://api.exchangeratesapi.io/latest")
+}, 60000);

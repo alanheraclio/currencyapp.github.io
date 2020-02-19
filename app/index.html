@@ -8,16 +8,22 @@
 
 <body>
     <h1>Currency App 2</h1>
+    <p>Data refreshed every minute from:
+        <a href="https://api.exchangeratesapi.io/latest">https://api.exchangeratesapi.io/latest</a>
+    </p>
     <input id="one" type="number" min="1">
     <select class="coin" id="exchange1">
-    </select>
+    </select><span>growing</span>
     <br>
     <br>
     <input id="two" type="number" min="1" disabled>
     <select class="coin" id="exchange2">
-    </select>
+    </select><span>growing</span>
     <br>
 </body>
-<script src="js/index.js"></script>
+<script src="js/newData.js"></script>
+<script src="js/setExchange.js"></script>
+<script src="js/oldData.js"></script>
+<script src="js/compareExchange.js"></script>
 
 </html>
