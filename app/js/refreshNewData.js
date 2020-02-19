@@ -1,6 +1,6 @@
-function gettingOldData() {
-    console.log("gettingOldData running");
-    fetch('https://api.exchangeratesapi.io/2010-01-12')
+function refreshCurrentData() {
+    console.log("refreshNewData running");
+    fetch('https://api.exchangeratesapi.io/latest')
         .then(rates = (response) => response.json())
         .then(rates => {
             var data = JSON.parse(JSON.stringify(rates.rates));
@@ -10,15 +10,16 @@ function gettingOldData() {
             for (i = 0; i < values.length - 1; i++) {
                 var sel1 = document.getElementById("exchange1");
                 var options = sel1.getElementsByTagName("option");
-                options[i + 1].setAttribute("value2", values[i]);
+                options[i + 1].setAttribute("value", values[i]);
                 var sel2 = document.getElementById("exchange2");
                 var options2 = sel2.getElementsByTagName("option");
-                options2[i + 1].setAttribute("value2", values[i]);
+                options2[i + 1].setAttribute("value", values[i]);
             }
         })
 }
 
-setTimeout(() => {
-    gettingOldData();
-    console.log("old data getted from: https://api.exchangeratesapi.io/2010-01-12")
-}, 2000);
+
+setInterval(() => {
+    refreshCurrentData();
+    console.log("data refreshed from: https://api.exchangeratesapi.io/latest")
+}, 60000);

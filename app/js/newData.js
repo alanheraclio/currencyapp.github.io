@@ -20,8 +20,3 @@ function gettingCurrentData() {
 }
 
 gettingCurrentData();
-
-setInterval(() => {
-    gettingCurrentData();
-    console.log("data refreshed from: https://api.exchangeratesapi.io/latest")
-}, 60000);
